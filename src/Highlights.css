@@ -1,0 +1,38 @@
+section.highlights {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section.highlights h3 {
+    margin-top: 0;
+}
+
+section.highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.highlights li {
+    margin-bottom: 10px;
+}
+
+.instagram-reels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the reels horizontally */
+    gap: 10px; /* Reduce the gap between reels */
+    margin-top: 20px;
+}
+
+.reel {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust width to fit 3 reels per row with reduced gap */
+    max-width: 540px; /* Ensure the reels don't exceed their maximum width */
+    box-sizing: border-box;
+    margin: 10px; /* Add margin to ensure proper spacing */
+}
+
+.reel h4 {
+    text-align: center;
+    margin-top: 10px;
+}
