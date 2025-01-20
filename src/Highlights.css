@@ -2,10 +2,16 @@ section.highlights {
     background-color: #e9ecef;
     padding: 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+section.highlights:hover {
+    background-color: #d9d9d9;
 }
 
 section.highlights h3 {
     margin-top: 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 section.highlights ul {
@@ -30,9 +36,28 @@ section.highlights li {
     max-width: 540px; /* Ensure the reels don't exceed their maximum width */
     box-sizing: border-box;
     margin: 10px; /* Add margin to ensure proper spacing */
+    transition: transform 0.3s ease-in-out;
+}
+
+.reel:hover {
+    transform: scale(1.05);
 }
 
 .reel h4 {
     text-align: center;
     margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.reel h4:hover {
+    color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

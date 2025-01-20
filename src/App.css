@@ -22,10 +22,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.App-header:hover {
+  background-color: #1c1f24;
 }
 
 .App-link {
   color: #61dafb;
+  transition: color 0.3s ease-in-out;
+}
+
+.App-link:hover {
+  color: #21a1f1;
 }
 
 @keyframes App-logo-spin {
