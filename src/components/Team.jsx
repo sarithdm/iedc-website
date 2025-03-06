@@ -3,15 +3,15 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const team = [
   {
-    name: "Dr. John Doe",
+    name: "Sarith Divakar",
     role: "Faculty Coordinator",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "#",
     bio: "Leading innovation and entrepreneurship initiatives at LBSCEK."
   },
   {
-    name: "Dr. Jane Smith",
+    name: "Arathi",
     role: "Faculty Coordinator",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "#",
     bio: "Expert in technology and innovation management."
   },
   // Add 20 more team members with placeholder data
