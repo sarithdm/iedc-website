@@ -9,6 +9,7 @@ import TeamPage from './components/TeamPage';
 import Communities from './components/Communities';
 import CommunitiesPage from './components/CommunitiesPage';
 import CommunityPage from './components/CommunityPage';
+import EventPage from './components/EventPage'; // Import the new EventPage component
 import Footer from './components/Footer';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -50,9 +51,9 @@ function App() {
             <a href="/#about" className={`transition-colors ${
               isScrolled ? 'text-blue-900 hover:text-blue-700' : 'text-white hover:text-blue-200'
             }`}>About</a>
-            <a href="/#events" className={`transition-colors ${
+            <Link to="/events" className={`transition-colors ${
               isScrolled ? 'text-blue-900 hover:text-blue-700' : 'text-white hover:text-blue-200'
-            }`}>Events</a>
+            }`}>Events</Link>
             <a href="/#highlights" className={`transition-colors ${
               isScrolled ? 'text-blue-900 hover:text-blue-700' : 'text-white hover:text-blue-200'
             }`}>Highlights</a>
@@ -80,7 +81,7 @@ function App() {
           <div className="md:hidden absolute top-16 left-0 right-0 bg-blue-900 bg-opacity-90 py-4">
             <div className="flex flex-col space-y-4">
               <a href="/#about" className="text-white hover:text-blue-200 transition-colors px-4">About</a>
-              <a href="/#events" className="text-white hover:text-blue-200 transition-colors px-4">Events</a>
+              <Link to="/events" className="text-white hover:text-blue-200 transition-colors px-4">Events</Link>
               <a href="/#highlights" className="text-white hover:text-blue-200 transition-colors px-4">Highlights</a>
               <a href="/#team" className="text-white hover:text-blue-200 transition-colors px-4">Team</a>
               <Link to="/communities" className="text-white hover:text-blue-200 transition-colors px-4">Communities</Link>
@@ -113,6 +114,7 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/communities" element={<CommunitiesPage />} />
             <Route path="/communities/:id" element={<CommunityPage />} />
+            <Route path="/events" element={<EventPage />} /> {/* Add the new EventPage route */}
           </Routes>
         </main>
 
@@ -122,4 +124,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

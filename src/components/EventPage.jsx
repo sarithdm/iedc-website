@@ -32,8 +32,9 @@ EventCard.propTypes = {
   index: PropTypes.number.isRequired,
 };
 
-const Events = () => {
-  const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 4); // Get the 4 latest upcoming events
+const EventPage = () => {
+  const upcomingEvents = events.filter(event => new Date(event.date) >= new Date());
+  const pastEvents = events.filter(event => new Date(event.date) < new Date());
 
   return (
     <section className="py-20">
@@ -47,18 +48,29 @@ const Events = () => {
         >
           Upcoming Events
         </motion.h2>
-        {upcomingEvents.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <EventCard key={index} event={event} index={index} />
-            ))}
-          </div>
-        ) : (
-          <p className="text-center text-gray-600">No upcoming events</p>
-        )}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {upcomingEvents.map((event, index) => (
+            <EventCard key={index} event={event} index={index} />
+          ))}
+        </div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-title"
+        >
+          Past Events
+        </motion.h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pastEvents.map((event, index) => (
+            <EventCard key={index} event={event} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Events;
+export default EventPage;
