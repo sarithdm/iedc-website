@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Hero from './components/Hero';
 import About from './components/About';
 import Events from './components/Events';
@@ -9,8 +9,10 @@ import TeamPage from './components/TeamPage';
 import Communities from './components/Communities';
 import CommunitiesPage from './components/CommunitiesPage';
 import CommunityPage from './components/CommunityPage';
-import EventPage from './components/EventPage'; // Import the new EventPage component
+import EventPage from './components/EventPage';
 import Footer from './components/Footer';
+import Login from './components/Login';
+import Admin from './components/Admin';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function App() {
@@ -103,6 +105,11 @@ function App() {
     </>
   );
 
+  const PrivateRoute = ({ children }) => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    return isAuthenticated ? children : <Navigate to="/login" />;
+  };
+
   return (
     <Router>
       <div className="min-h-screen">
@@ -114,7 +121,9 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/communities" element={<CommunitiesPage />} />
             <Route path="/communities/:id" element={<CommunityPage />} />
-            <Route path="/events" element={<EventPage />} /> {/* Add the new EventPage route */}
+            <Route path="/events" element={<EventPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
           </Routes>
         </main>
 

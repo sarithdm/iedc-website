@@ -1,4 +1,5 @@
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,8 +16,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
+              <li><a href="/ #about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/Events" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Programs</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
@@ -62,10 +63,11 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} IEDC LBSCEK. All rights reserved.</p>
+          <Link to="/login" className="text-blue-400 hover:text-blue-600 transition-colors">Login</Link>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;
