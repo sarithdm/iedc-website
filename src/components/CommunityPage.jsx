@@ -53,9 +53,9 @@ const communityData = {
         name: "Dr. Sarith Divakar M",
         role: "Staff Coordinator",
         image: "https://api.dicebear.com/6.x/initials/svg?seed=SR",
-        contact: "sreeraj@iedc.com",
+        contact: "sarith@lbscek.ac.in",
         linkedin: "https://linkedin.com/in/sreeraj-r",
-        github: "https://github.com/sreerajr"
+        github: "https://github.com/sarithdivakar"
       },
       {
         name: "Sreenidhi CV",
@@ -69,38 +69,38 @@ const communityData = {
         name: "Mariyamath Luba",
         role: "Co-lead",
         image: "https://api.dicebear.com/6.x/initials/svg?seed=PS",
-        contact: "priya@thinkerhub.org",
-        linkedin: "https://linkedin.com/in/priya-singh",
-        github: "https://github.com/priyasingh"
+        contact: "mariyamathluba@lbscek.ac.in",
+        linkedin: "https://linkedin.com/in/mariyamathluba",
+        github: "https://github.com/mariyamathluba"
       },
       {
         name: "Shivanandh V",
         role: "Co-lead",
         image: "https://api.dicebear.com/6.x/initials/svg?seed=AM",
-        contact: "arun@thinkerhub.org",
-        linkedin: "https://linkedin.com/in/arun-menon",
-        github: "https://github.com/arunmenon"
+        contact: "shivanandh@lbscek.ac.in",
+        linkedin: "https://linkedin.com/in/shivanandh-v",
+        github: "https://github.com/shivanandh-v"
       },
       {
         name: "Oneela Gopi",
         role: "Women in tech lead",
         image: "https://api.dicebear.com/6.x/initials/svg?seed=SP",
-        contact: "sneha@thinkerhub.org",
-        linkedin: "https://linkedin.com/in/sneha-patel",
-        github: "https://github.com/snehapatel"
+        contact: "oneelagopi@lbscek.ac.in",
+        linkedin: "https://linkedin.com/in/oneelagopi",
+        github: "https://github.com/oneelagopi"
       },
       {
         name: "joyal Josaph",
         role: "outreach Lead",
         image: "https://api.dicebear.com/6.x/initials/svg?seed=KR",
-        contact: "kiran@thinkerhub.org",
-        linkedin: "https://linkedin.com/in/kiran-raj",
-        github: "https://github.com/kiranraj"
+        contact: "joyaljosaph@lbscek.ac.in",
+        linkedin: "https://linkedin.com/in/joyaljosaph",
+        github: "https://github.com/joyaljosaph"
       }
     ],
     contact: {
       email: "thinkerhub@iedc.com",
-      coordinator: "Jane Smith"
+      coordinator: "Srinidhi C V"
     }
   },
   cyber: {
@@ -112,7 +112,7 @@ const communityData = {
     achievements: ["Best Security Community 2023", "10+ Security Certifications", "Successfully Protected College Network"],
     contact: {
       email: "cyber@iedc.com",
-      coordinator: "Alex Johnson"
+      coordinator: "Abin N R"
     }
   },
   floss: {
