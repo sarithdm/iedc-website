@@ -11,9 +11,12 @@ import CommunitiesPage from './components/CommunitiesPage';
 import CommunityPage from './components/CommunityPage';
 import EventPage from './components/EventPage';
 import Footer from './components/Footer';
-import Login from './components/Login';
+import { Login } from './components/Login';
 import Admin from './components/Admin';
+import { CQO } from './components/Login';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Dashboard from './components/Dashboard';
+
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -106,7 +109,7 @@ function App() {
   );
 
   const PrivateRoute = ({ children }) => {
-    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    const isAuthenticated = localStorage.getItem('token');
     return isAuthenticated ? children : <Navigate to="/login" />;
   };
 
@@ -124,6 +127,8 @@ function App() {
             <Route path="/events" element={<EventPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
+            <Route path="/cqo" element={<PrivateRoute><CQO /></PrivateRoute>} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
 
